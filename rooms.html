@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluestay Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            /* Use Montserrat font */
+            background-color: #f4f9f4;
+        }
+
+        h2 {
+            color: #5c5833;
+
+        }
+
+        .navbar {
+            background-color: #5c5833;
+        }
+
+        .navbar-brand {
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+        }
+
+        .room-card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .room-card img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* .room-card .card-body {
+      text-align: center;
+    } */
+
+        .room-card .btn-dark {
+            background-color: #5c5833;
+            color: white;
+            border: none;
+        }
+
+        .btn-primay {
+            background-color: #c1b64c;
+            border: none;
+            color: white;
+        }
+        .room-card .btn-primay:hover {
+            background-color: #c1b64c;
+            border: none;
+            color: white;
+
+        }
+        .room-card .btn-dark:hover {
+            background-color: #5c5833;
+        }
+
+        .modal-header {
+            border-bottom: none;
+        }
+
+        .modal-footer .btn {
+            border: none;
+        }
+
+        .modal-footer .btn-primay {
+            background-color:#c1b64c;
+            border: none;
+            color: white;
+
+        }
+        .modal-footer .btn-primay:hover {
+            background-color:#c1b64c;
+            border: none;
+            color: white;
+
+        }
+        
+        
+.navbar-toggler-icon {
+    border:none;
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark text-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">BLUESTAY HOTEL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bookings</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html"> Logout <i class="fa-solid fa-sign-out-alt"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Available Rooms -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Available Rooms</h2>
+        <div class="row g-4">
+            <!-- Room 1 -->
+            <div class="col-md-4">
+                <div class="card room-card">
+                    <img src="img4.jpg" alt="Luxury Room">
+                    <div class="card-body">
+                        <h5 class="card-title">Luxury</h5>
+                        <p class="card-text">₹1599.00 per night</p>
+                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#roomDetailsModal">View
+                            Details</button>
+                        <a href="booking.html" class="btn btn-primay">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 2 -->
+            <div class="col-md-4">
+                <div class="card room-card">
+                    <img src="img2.jpg" alt="Executive Suite">
+                    <div class="card-body">
+                        <h5 class="card-title">Executive Suite</h5>
+                        <p class="card-text">₹2000.00 per night</p>
+                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#roomDetailsModal1">View
+                            Details</button>
+                            <a href="booking.html" class="btn btn-primay">Book Now</a>
+                        </div>
+                </div>
+            </div>
+
+            <!-- Room 3 -->
+            <div class="col-md-4">
+                <div class="card room-card">
+                    <img src="img3.jpg" alt="Standard Room">
+                    <div class="card-body">
+                        <h5 class="card-title">Standard Room</h5>
+                        <p class="card-text">₹1699.00 per night</p>
+                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#roomDetailsModal2">View
+                            Details</button>
+                        <a href="booking.html" class="btn btn-primay">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room Details Modal -->
+    <div class="modal fade" id="roomDetailsModal" tabindex="-1" aria-labelledby="roomDetailsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="roomDetailsLabel">Room Details - Luxury</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img4.jpg" class="img-fluid rounded" alt="Luxury Room">
+                    <p class="mt-3"><strong>Description:</strong> Garden view, queen bed, modern amenities.</p>
+                    <p><strong>Price:</strong> ₹1599.00 per night</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="booking.html" class="btn btn-primay">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room Details Modal -->
+    <div class="modal fade" id="roomDetailsModal1" tabindex="-1" aria-labelledby="roomDetailsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="roomDetailsLabel">Room Details - Executive Suite
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img2.jpg" class="img-fluid rounded" alt="Luxury Room">
+                    <p class="mt-3"><strong>Description:</strong> Garden view, queen bed, modern amenities.</p>
+                    <p><strong>Price:</strong> ₹2000.00 per night</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="booking.html" class="btn btn-primay">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room Details Modal -->
+    <div class="modal fade" id="roomDetailsModal2" tabindex="-1" aria-labelledby="roomDetailsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="roomDetailsLabel">Room Details - Standard Room</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img3.jpg" class="img-fluid rounded" alt="Luxury Room">
+                    <p class="mt-3"><strong>Description:</strong> Garden view, queen bed, modern amenities.</p>
+                    <p><strong>Price:</strong> ₹1699.00 per night</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="booking.html" class="btn btn-primay">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
