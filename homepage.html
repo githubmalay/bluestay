@@ -4,142 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Booking</title>
+    <title>Bluestay Hotel</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    <link rel="stylesheet" href="index.css">
     <style>
-        body {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                url('hero_4.jpg') no-repeat center center fixed;
-            background-size: cover;
-            margin: 0;
-            height: 100vh;
-            font-family: 'Montserrat', sans-serif;
-            color: #fff;
-        }
 
-        .navbar-brand {
-            font-size: 1.5rem;
-            color: #fff;
-        }
-
-        .navbar-nav .nav-link {
-            color: #fff !important;
-            font-weight: bold;
-        }
-
-        .hero-section {
-            position: relative;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            color: #f5f5f5;
-        }
-
-        .booking-form-container {
-            z-index: 3;
-            padding: 15px;
-        }
-
-        .booking-form {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .form-label {
-            font-weight: bold;
-            color: #fff;
-        }
-
-        .form-control {
-            border-radius: 30px;
-            padding: 12px 20px;
-        }
-
-        .form-control:focus {
-            border-color: #c1b64c;
-            box-shadow: 0 0 5px rgba(193, 182, 76, 0.5);
-        }
-
-        .btn-primary {
-            background: linear-gradient(90deg, #c1b64c, #c1b64c);
-            border: none;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 30px;
-        }
-
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2rem;
+        /* Media Query for Mobile */
+        @media (max-width: 767px) {
+            .hero-section {
+                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('hero.jpg') no-repeat center center;
+                color: #fff;
+                padding: 50px 0;
+                text-align: center;
             }
-.hero-section {
-            position: relative;
-            height: 33vh;
-           
-        }
+
+            .hero-content h2 {
+                font-size: 1.5rem;
+            }
+
             .hero-content p {
                 font-size: 1rem;
             }
-
-            .navbar-brand {
-                font-size: 1.2rem;
-            }
-
-            .booking-form {
-                padding: 15px;
-            }
-
-            .form-label {
-                font-size: 0.9rem;
-            }
+            .highlight-text {
+            margin: -19px 20px 20px 20px;
+            
         }
-
-        @media (max-width: 576px) {
-            .hero-content h1 {
-                font-size: 1.8rem;
+            .content-section .col-md-6 {
+                margin-bottom: 30px;
             }
 
-            .booking-form {
-                padding: 10px;
+            .highlight-card h5 {
+                font-size: 1rem;
             }
 
-            .form-label {
-                font-size: 0.8rem;
+            .footer-section ul {
+                padding-left: 0;
+                text-align: center;
+                list-style: none;
             }
 
-            .btn-primary {
+            .footer h5 {
+                text-align: center;
+
+            }
+
+            .footer-section ul li {
+
+                margin-bottom: 10px;
+            }
+            .info-detail {
+                font-size: 1.1rem;
+            }
+            .info-title {
                 font-size: 0.9rem;
-                padding: 8px 15px;
+            }
+            .newsletter input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .newsletter button {
+                width: 100%;
+            }
+
+            .footer .newsletter input[type="email"] {
+                width: 100%;
+            }
+
+            .text-section {
+                width: 100%;
+            }
+
+            .image-section {
+                width: 100%;
+            }
+
+            .content-section {
+                padding-bottom: 0;
+            }
+            .booking-form {
+                margin-left: 20px;
+                margin-right: 20px;
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark text-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">BLUESTAY HOTEL</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -149,58 +106,222 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="admin_dashboard.html">    <i class="fas fa-user-shield"></i> Admin
-                        </i></a>
+                        <a class="nav-link" href="admin"><i class="fas fa-history"></i> Booking
+                            History</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">Logout <i class="fa-solid fa-sign-out-alt"></i></a>
+                        <a class="nav-link" href="login.html"> Logout <i class="fa-solid fa-sign-out-alt"></i></a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <div class="hero-section">
         <div class="hero-content">
-            <p>Welcome to Hotel BlueStay</p>
-            <h1>A Best Place To Stay</h1>
+            <p>Welcome to <span class="fa fa-star" style="color:#ffd700;"></span> 5-Star Luxury</p>
+            <h2>A Best Place To Stay</h2>
         </div>
     </div>
 
-    <!-- Booking Form -->
-    <div class="booking-form-container">
-        <div class="booking-form">
-            <form action="" method="GET">
-                <div class="row g-3">
-                    <div class="col-md-3">
-                        <label for="checkin" class="form-label">Check-in Date:</label>
-                        <input type="date" name="checkin" class="form-control">
-                    </div>
-                    <div class="col-md-3">
-                        <label for="checkout" class="form-label">Check-out Date:</label>
-                        <input type="date" name="checkout" class="form-control">
-                    </div>
-                    <div class="col-md-3">
-                        <label for="guests" class="form-label">Guests:</label>
-                        <select name="guests" class="form-control">
-                            <option value="1">1 Sharing</option>
-                            <option value="2">2 Sharing</option>
-                            <option value="3">3 Sharing</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3">
-
-                    <div class="col-12 d-flex align-items-center justify-content-center mt-4 pt-2 ">
-                        <a href="rooms.html" class="btn btn-primary w-100">Check Availability</a>
-                    </div>
-                    </div>
+    <div class="booking-form">
+        <form>
+            <div class="row g-3">
+                <div class="col-md-3 col-12">
+                    <label class="form-label">Check-in Date:</label>
+                    <input type="date" class="form-control">
                 </div>
-            </form>
+                <div class="col-md-3 col-12">
+                    <label class="form-label">Check-out Date:</label>
+                    <input type="date" class="form-control" >
+                </div>
+                <div class="col-md-3 col-12">
+                    <label class="form-label">Guests:</label>
+                    <select class="form-control">
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                    </select>
+                </div>
+                <div class="col-md-3 col-12 d-flex align-items-end">
+                    <a href="rooms.html" class="btn btn-primary w-100">Check Availability</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <div class="content-section row">
+            <div class="text-section col-md-6">
+                <h2>Exquisite <br> Artisanal <br> Indulgence</h2>
+                <p>
+                    Welcome to Bluestay, A perfect place to relax and have fun. Enjoy our comfortable rooms, take a dip
+                    in the swimming pool, and have a great time with games and other activities. Whether you're looking
+                    for a peaceful getaway or an exciting experience, Bluestay has everything you need for a memorable
+                    stay.
+                </p>
+            </div>
+            <div class="image-section col-md-6">
+                <img src="artic.jpg" alt="Luxury Spa">
+            </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
+    <div class="container highlights mt-5 pt-3">
+        <div class="row mx-1">
+            <div class="col-md-4 mb-2">
+                <h2>HIGHLIGHTS</h2>
+            </div>
+            <div class="col-md-8">
+                <p class="highlight-text"> At Bluestay, we offer a serene escape, blending luxury, comfort, and
+                    exceptional service to ensure every moment of your stay is unforgettable. With thoughtfully designed
+                    spaces and a commitment to personalized care, we provide an experience that refreshes both body and
+                    mind.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="highlight-card">
+                    <img src="highlight.jpg" alt="Wellness Cuisine">
+                    <h5>ENJOY A JOURNEY OF HEALTHY AND DELICIOUS FOOD</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="highlight-card">
+                    <img src="highlight2.jpg" alt="Spa Experience">
+                    <h5>HOST PRODUCTIVE MEETINGS AND SUCCESSFUL CONFERENCES</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="highlight-card">
+                    <img src="highlight1.jpg" alt="Ayurveda Wisdom">
+                    <h5>EXPLORE THE HEALING BENEFITS OF AYURVEDA</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container hotel-info">
+        <div class="row">
+            <h1>HOTEL <br> INFORMATION</h1>
+
+            <!-- Check-in and Check-out -->
+            <div class="col-md-4 info-section">
+                <p class="info-title">
+                    Check In - Check Out
+                </p>
+                <p class="info-detail">
+                    <i class="fas fa-calendar-check"></i>
+                    Check-in from 2:00 pm <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check-out until noon
+                </p>
+            </div>
+
+            <!-- Rooms & Suites -->
+            <div class="col-md-4 info-section">
+                <p class="info-title">
+                    Rooms & Suites
+                </p>
+                <p class="info-detail">
+                    <i class="fas fa-bed"></i>
+                    105 rooms & 11 suites
+                </p>
+            </div>
+
+            <!-- Current Temperature -->
+            <div class="col-md-4 info-section">
+                <p class="info-title">
+                    Current Temperature
+                </p>
+                <p class="info-detail">
+                    <i class="fas fa-thermometer-half"></i>
+                    31.39°C
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Dining -->
+            <div class="col-md-4 info-section">
+                <p class="info-title">
+                    Dining
+                </p>
+                <p class="info-detail">
+                    <i class="fas fa-utensils"></i>
+                    3 restaurants
+                </p>
+            </div>
+
+            <!-- Wellness -->
+            <div class="col-md-4 info-section">
+                <p class="info-title">
+                    Wellness
+                </p>
+                <p class="info-detail">
+                    <i class="fas fa-spa"></i>
+                    J Wellness Circle <br>
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Holistic spa & Ayurveda therapies
+                </p>
+            </div>
+
+            <!-- Hotel Essentials -->
+            <div class="col-md-4 info-section">
+                <p class="info-title">
+                    Address
+                </p>
+                <p class="info-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Makrana Mohalla, Fort Rd,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Near Clock Tower Road, Jodhpur,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rajasthan 342001
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-md-4 footer-section">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> +123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> info@hotel.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Makrana Mohalla, Fort Rd, Rajasthan 342001</li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-4 footer-section">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Rooms & Suites</a></li>
+                        <li><a href="#">Dining</a></li>
+                        <li><a href="#">Wellness</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Subscription -->
+                <div class="col-md-4 footer-section newsletter">
+                    <h5>Subscribe to Our Newsletter</h5>
+                    <form>
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 BlueStay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
